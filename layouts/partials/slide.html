@@ -4,7 +4,11 @@
 		<div class="swiper-slide">
 			<img class="blur-sm" src="{{ .image }}" alt="" />
 			<div class="s-fade-txt">
+				{{if .color}}
+				<h1 class="slide-text text-5xl {{.color}}">{{.title }}</h1>
+				{{else}}
 				<h1 class="slide-text text-5xl text-gray-800">{{.title }}</h1>
+				{{end}}
 			</div>
 		</div>
 		{{ end }}
