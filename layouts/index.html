@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="{{ .Site.LanguageCode }}">
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC">
     {{- partial "head.html" . -}}
     <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
     <meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
@@ -23,7 +25,7 @@
     {{- partial "slide.html" . -}}
     {{- partial "strip.html" . -}}
     <div class="mx-auto my-10 max-w-6xl">
-        <h2 class="text-4xl ml-2">Blog</h2>
+        <h2 class="text-4xl ml-2">{{.Param "blogName"}}</h2>
         {{- partial "recent.html" . -}}
     </div>
     {{- partial "footer.html" . -}}
